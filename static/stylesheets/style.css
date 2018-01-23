@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.mybtn{
+    border: 1px solid rgb(23, 162, 184);
+    color: rgb(23, 162, 184);
+    margin-left: 10px;
+    padding-left: 15px;
+    background-color: rgba(33, 37, 41, 0);
+}
+.mybtn:hover{
+    background-color: rgb(23, 162, 184);
+    color: white;
 }
 
-a {
-  color: #00B7FF;
+h5.tJogos{
+    text-align: center;
+    padding :10px;
 }
