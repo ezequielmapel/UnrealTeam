@@ -27,7 +27,7 @@ app.get('/', function(req, res){
     res.render('views/default/index.ejs');
 });
 
-app.listen(3000,'192.168.1.251', function(){
+app.listen(3000,'200.137.87.196', function(){
     console.log("Listening on 3000");
 });
 

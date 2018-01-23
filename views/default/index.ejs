@@ -11,6 +11,7 @@ body{
 /*------------  ------------*/
 
 
+
 .btnDiv{
 
     text-align: center;
@@ -40,20 +41,26 @@ body{
   padding: 0;
 
 }
-.row {
-  width: 100%;
-}
+
 .carousel {
   position: relative;
   top: 0;
   left: 0;
-
+  margin: 0 auto;
+  float: none;
+  width: 100%;
+}
 
 .carousel-inner{
-  height: 100%;
+  height: 864px;
 }
 .carousel-item {
   opacity .5;
+}
+
+a.carousel-control-prev, a.carousel-control-next{
+    height: 100px;
+    top: 40%;
 }
 
 
@@ -76,11 +83,16 @@ body{
                     </div>
 
 				</div> <!-- close carousel-item 1 -->
-                <div class="btnDiv"><a class="btn btn-primary mybtn" href="/login/escolher-jogo" id="btnMontar" role="button">Montar</a></div>
+                <div class="btnDiv"><button class="btn btn-primary mybtn" id="btnMontar" data-toggle="modal" data-target="#modalJogos" role="button">Montar</button></div>
 
-				<div class="carousel-item" style="position: absolute; top:0px; width: 100% ; height: 100%">
+				<div class="carousel-item " style="position: absolute; top:0px; width: 100% ; height: 100%">
 					<img class="d-block w-100" src="https://steamuserimages-a.akamaihd.net/ugc/705110818734510532/04A7F450ABC6706DBA96A0FBCE81CC6ED950DBCE/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside%7C1024%3A576&composite-to=*,*%7C1024%3A576&background-color=black" alt="Second slide">
-				</div> <!-- close carousel-item 2 -->
+                    <div class="carousel-caption d-none d-md-block customCaption">
+                        <h5>Counter-Strike GO</h5>
+                        <p>Monte seu  time do Counter-Strike!</p>
+
+                    </div>
+                </div> <!-- close carousel-item 2 -->
 
 
                 <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -92,9 +104,12 @@ body{
             <span class="sr-only">Next</span>
           </a>
 		</div> <!-- close carousel -->
-
+        </div>
+    </div>
+</div>
+        <div class="container">
             <hr style="width:10px; height: 50px;"></hr>
-            <h5 class="tJogos">Jogos</h5>
+            <h5 class="tJogos">Tutorial</h5>
             <div class="row">
               <div class="col-sm-6 jogos">
 
@@ -117,17 +132,117 @@ body{
                   </div>
                 </div>
 
+            <div class="conteudo">
+                <h5>Sobre</h5>
+                <div  id="sobre" style="margin: 0 auto; float: none;">
+                    <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
 
-        <div  id="sobre">
-            <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+                <div id="contato"  >
+                    <h5>Contato</h5>
+                    <div id="contato2" style="margin: 0 auto; float: none;">
+                        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
         </div>
+        <hr>
+        <!-- FORM -->
+        <div id="cadastro" class="formCadastro">
+            <h5>Cadastro</h5>
+            <form>
+              <div class="form-group row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Senha">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Confirme a senha">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary mybtn">Criar</button>
 
+        </form>
+        </div>
     </div>
+
 </div>
 
+<!-- Modal - modalJogos -->
+    <div class="modal fade" id="modalJogos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Escolha o jogo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="side1">
+              <a href="#" style="text-decoration: none; "><img src="https://yt3.ggpht.com/a-/AK162_4ThmNADCcc0HLGy2e69pABpQvxo5qcoOpRrA=s900-mo-c-c0xffffffff-rj-k-no" width="100" height="100" /></a>
+              <button href="#" class="btn btn-primary mybtn">LOL</button>
+          </div>
+          <div class="side2"><a href="#">
+               <img src="https://victorimrothwordpresscom.files.wordpress.com/2016/04/cs_go_icon_by_rustycharles-d4t7rd5.png?w=300" width="100" height="100" />
+           </a><button class="btn btn-primary mybtn">CS</button>
+          </div>
+      </div>
+      <!--
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+        -->
+    </div>
+    </div>
+    </div>
 
+    <!-- Modal -->
+        <div class="modal fade" id="modalSingIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Escolha opção de login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="side1">
+                  <a class="btn btn-block btn-social btn-twitter">
+   <span class="fa fa-twitter"></span>
+   Sign in with Twitter
+ </a>
+              </div>
+              <div class="side2"><a href="#">
+
+
+              </div>
+          </div>
+          <!--
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+            -->
+        </div>
+        </div>
+        </div>
+
+    <!-- SCRIPTS -->
     <script>
-        $('.carousel').carousel({interval:4000});
+        $('.carousel').carousel({interval:5000});
 
 
 

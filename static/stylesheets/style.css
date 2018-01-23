@@ -14,3 +14,57 @@ h5.tJogos{
     text-align: center;
     padding :10px;
 }
+
+.modal-body{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.modal-body button{
+    margin-top: 10px;
+}
+
+.side1, .side2{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side1 img, .side2 img{
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px 1px black;
+}
+
+.card{
+    padding: 50px;
+}
+
+.conteudo{
+    margin-top: 50px;
+}
+
+.conteudo #sobre, #contato2{
+    padding: 50px;
+}
+
+
+.formCadastro form{
+    margin: 0 auto;
+    width: 400px;
+}
+form input{
+    margin-top: 5px;
+}
+.formCadastro h5{
+    text-align: justify;
+}
+.formCadastro {
+    text-align: center;
+}
+.formCadastro button{
+    margin-top: 25px;
+}
