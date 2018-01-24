@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var passport = require('passport');
 
 var app = express();
 
@@ -19,15 +19,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
+// OTHER ROUTES
+require('./passportConfig')(passport);
+require('./routes/routeGoogle')(app, passport);
 
 
 app.get('/', function(req, res){
     res.render('views/default/index.ejs');
 });
 
-app.listen(3000,'200.137.87.196', function(){
+app.listen(3000,'localhost', function(){
     console.log("Listening on 3000");
 });
 

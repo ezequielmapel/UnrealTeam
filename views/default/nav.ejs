@@ -16,6 +16,20 @@
             background-color: rgb(23, 162, 184);
             color: white;
         }
+
+        #btnIn:active{
+            box-shadow: 0px 0px 2px 1px white;
+            color: white;
+            background-color: rgb(23, 162, 184);
+
+        }
+        #btnOut:active{
+            box-shadow: 0px 0px 2px 1px white;
+            color: white;
+            background-color: rgb(23, 162, 184);
+
+        }
+
     </style>
 
     <head>
@@ -23,6 +37,8 @@
         <link rel="stylesheet" href="../../static/bootstrap-4.0.0/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="../../static/stylesheets/style.css" />
         <link rel="stylesheet" href="../../static/bootstrap-4.0.0/dist/css/bootstrap-social.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <script src="../../static/bootstrap-4.0.0/assets/js/vendor/jquery-slim.min.js"></script>
         <script src="../../static/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
         <script src="../../static/bootstrap-4.0.0/dist/js/bootstrap.js"></script>
@@ -60,9 +76,60 @@
       </li>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" data-target="#modalSingIn" data-toggle="modal" id="btnIn" type="submit">SIGN IN</button>
+    <div class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" href="#" data-target="#modalSingIn" data-toggle="modal" id="btnIn" type="submit">SIGN IN</button>
        <a class="btn btn-outline-success my-2 my-sm-0" href="#cadastro" id="btnOut" type="submit">SIGN UP</a>
-    </form>
+    </div>
   </div>
 </nav>
+
+<!-- Modal -->
+    <div class="modal fade" id="modalSingIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Escolha opção de login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mbody">
+          <div class="side1">
+              <div class="row redes-sociais">
+                <a href="/login/facebook" class="fa fa-facebook"></a>
+                <a href="/login/google" class="fa fa-google"></a>
+            </div>
+
+            <hr width="100px">
+
+
+          </div>
+          <div class="side2">
+              <form>
+                  <h5>Ou</h5>
+                  <div class="form-group">
+                       <label for="exampleInputEmail1"></label>
+                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@unrealteam.com">
+
+                     </div>
+                     <div class="form-group">
+
+                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                     </div>
+                     <div class="form-check">
+                       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                       <label class="form-check-label" for="exampleCheck1">Lembrar</label>
+                     </div>
+                     <button type="submit"  class="btn btn-primary mybtn">Entrar</button>
+                 </form>
+          </div>
+      </div>
+      <!--
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+        -->
+    </div>
+    </div>
+    </div>
