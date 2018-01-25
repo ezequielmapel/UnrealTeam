@@ -28,6 +28,7 @@ require('./passportConfig')(passport);
 require('./routes/routeGoogle')(app, passport);
 
 
+
 app.get('/', function(req, res){
     res.render('views/default/index.ejs');
 });

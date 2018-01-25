@@ -118,3 +118,35 @@ form input{
     background-color: rgb(221, 75, 57,.7);;
 
 }
+
+
+/* NAV */
+
+#btnIn, #btnOut{
+    border: 1px solid rgb(23, 162, 184);
+    color: rgb(23, 162, 184);
+    margin-left: 10px;
+    padding-left: 15px;
+}
+#btnIn:hover{
+    background-color: rgb(23, 162, 184);
+    color: white;
+}
+
+#btnOut:hover{
+    background-color: rgb(23, 162, 184);
+    color: white;
+}
+
+#btnIn:active{
+    box-shadow: 0px 0px 2px 1px white;
+    color: white;
+    background-color: rgb(23, 162, 184);
+
+}
+#btnOut:active{
+    box-shadow: 0px 0px 2px 1px white;
+    color: white;
+    background-color: rgb(23, 162, 184);
+
+}
