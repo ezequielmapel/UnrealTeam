@@ -1,4 +1,4 @@
-
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 module.exports = function(app, passport){
     app.get('/login/google', passport.authenticate('google', {scope: ['profile', 'email']}));
@@ -14,7 +14,12 @@ module.exports = function(app, passport){
     });
 
     // render main page
-    app.get('/login/google/index', function(req, res){
-        res.render('views/logado/indexLogado.ejs');
+    app.get('/login/google/index',ensureLoggedIn('/'),function(req, res){
+        var photo = req.user.photos[0].value;
+        var nome = req.user.displayName;
+        var usuario = 'none';
+        var email = req.user.emails[0].value;
+
+        res.render('views/logado/indexLogado.ejs', {photo:photo, nome:nome, usuario:usuario, email:email});
     });
 }

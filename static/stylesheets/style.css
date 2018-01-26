@@ -150,3 +150,28 @@ form input{
     background-color: rgb(23, 162, 184);
 
 }
+
+.perfil{
+    margin-top: 65px;
+}
+
+.perfil td img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.perfil img:hover{
+    opacity: .5;
+}
+
+.perfil .tdBg:hover{
+    background-color: black;
+}
+
+.perfil figcaption {
+    text-align: center;
+    display: none;
+    color: white;
+    text-decoration: none;
+}
