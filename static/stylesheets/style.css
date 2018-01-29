@@ -151,7 +151,7 @@ form input{
 
 }
 
-.perfil{
+.perfil, .montar-time{
     margin-top: 65px;
 }
 
@@ -174,4 +174,16 @@ form input{
     display: none;
     color: white;
     text-decoration: none;
+}
+
+/*Montar time*/
+
+
+
+.selectTime{
+    display: flex;
+}
+
+.selectTime select{
+    margin-left: 10px;
 }

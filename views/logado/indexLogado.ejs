@@ -27,16 +27,49 @@
                     </table>
                 </div>
             </div>
+
+
+        <div class="col-6">
+            <div class="montar-time">
+                <table class="table table-dark">
+                      <tbody>
+                        <tr style="display: block; margin: 0 auto;">
+                          <th scope="row"></th>
+                          <td> <a class="aImg2" href="#"><img  class="imgTd" src="" width="750" height="100"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                            <form method="POST">
+                          <th scope="row">
+                              <div class="selectTime">
+                              <select id="privilegio" name="privilegio" class="form-control">
+                                    <option >Time 1</option>
+                                </select> &nbsp;&nbsp;&nbsp;x
+                                <select id="privilegio" name="privilegio" class="form-control">
+                                      <option >Time 2</option>
+                                  </select>
+                              </div>
+                          </th>
+                          <td class="tdBg"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                          <td  class="tdBg" ></td>
+                        </tr>
+                        <tr>
+                          <th scope="row"></th>
+                          <td  class="tdBg" ></td>
+                        </tr>
+                    </form>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
         </div>
 
         <script>
-            $('.imgTd').mouseover(function(){
-                $('.aImg').show("Alterar foto");
-            });
 
-            $('.imgTd').mouseout(function(){
-                $('#figCapt').remove("Alterar foto");
-            });
         </script>
 </div>
 <% include ../default/footer.ejs %>
